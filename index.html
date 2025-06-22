@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ttriger - Главная</title>
+  <link rel="icon" type="image/png" href="icon-tt.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arial+Black&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: #000;
+      color: #fff;
+      font-family: 'Arial Black', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #222;
+      flex-wrap: wrap;
+    }
+
+    header img.logo {
+      height: 50px;
+      cursor: pointer;
+    }
+
+.logott {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #222;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Баннер */
+    .banner {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .banner h1 {
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 5rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 15px;
+    }
+
+    .banner p {
+      font-family: Arial, sans-serif;
+      font-weight: normal;
+      font-size: 1.3rem;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #ddd;
+    }
+
+    /* Последний релиз */
+    .latest-release {
+      position: relative;
+      margin-bottom: 60px;
+      background: #111;
+      border-radius: 4px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 15px #111;
+    }
+
+    .latest-label {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 0.9rem;
+      color: #999;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .latest-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .latest-cover {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 0 8px #000;
+    }
+
+    .latest-info {
+      flex: 1;
+    }
+
+    .latest-info h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .latest-info p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .latest-info .btn-primary {
+      font-size: 1rem;
+      padding: 10px 30px;
+    }
+
+    /* Новости */
+    .news {
+      margin-top: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .news h2 {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .news-item {
+      background: #111;
+      padding: 18px 20px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px #111;
+    }
+
+    .news-item time {
+      font-size: 0.9rem;
+      color: #777;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .news-item p {
+      font-size: 1.1rem;
+    }
+
+    /* Соцсети */
+    .socials {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 0 15px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s;
+    }
+
+    .socials a:hover {
+      filter: brightness(0) invert(0.6);
+    }
+
+    .socials img {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      
+      .logott {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 300px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 15px;
+      }
+
+      .banner h1 {
+        font-size: 3rem;
+      }
+
+      .banner p {
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        font-size: 1rem;
+        padding: 12px 28px;
+      }
+
+      .latest-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .latest-label {
+        position: static;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .latest-info h3 {
+        font-size: 1.6rem;
+      }
+
+      .latest-info p {
+        font-size: 1rem;
+      }
+
+      .latest-cover {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      .news h2 {
+        font-size: 1.6rem;
+      }
+
+      .news-item {
+        padding: 16px;
+      }
+
+      .news-item p {
+        font-size: 1rem;
+      }
+
+      .socials img {
+        width: 32px;
+        height: 32px;
+        margin: 0 8px;
+      }
+
+      .socials {
+        padding: 20px 0;
+      }
+    }
+    
+.release-cover {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  background-color: #000; /* или цвет подложки */
+}
+
+.news-item img.news-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #000;
+}
+
+
+
+    @media (max-width: 400px) {
+      .banner h1 {
+        font-size: 2.3rem;
+      }
+
+      .banner p {
+        font-size: 0.95rem;
+      }
+
+      .btn-primary {
+        font-size: 0.95rem;
+        padding: 10px 24px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Главная">
+      <img src="logo-ttriger.png" alt="ttriger logo" class="logo">
+    </a>
+    <nav>
+      <a href="index.html" class="active">Главная</a>
+      <a href="releases.html">Релизы</a>
+      <a href="ratings.html">Оценка</a>
+      <a href="news.html">Новости</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="hidden.html">?</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+  <img src="logo-tt.png" alt="tt logo" class="logott" />
+      <p>Инструментальная музыка и не только</p>
+      <a href="releases.html" class="btn-primary">Перейти к релизам</a>
+    </section>
+
+<section class="latest-release">
+  <div class="latest-label">Последний релиз</div>
+  <div class="latest-content">
+    <img src="trt-cover.png" alt="Trial Tones" class="release-cover" />
+    <div class="latest-info">
+      <h3>Trial Tones</h3>
+      <p>Лучшие наработки начинающего меня</p>
+      <a href="/trialtones.html" class="btn-primary">Смотреть</a>
+    </div>
+  </div>
+</section>
+
+    <section class="news">
+      <h2>Свежие новости</h2>
+
+    </section>
+
+    <section class="socials" aria-label="Социальные сети и площадки">
+      <a href="https://vk.com/tt.real" target="_blank" rel="noopener noreferrer" aria-label="VK">
+        <img src="logo-vk.png" alt="VK" />
+      </a>
+      <a href="https://untitled.stream/library/project/1OOejGe9eL63fI8mOBGQQ" target="_blank" rel="noopener noreferrer" aria-label="Untitled Stream">
+        <img src="logo-untitled.png" alt="Untitled Stream" style="width:36px; height:36px; filter: invert(1);" />
+      </a>
+      <a href="https://www.youtube.com/@ttriger" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <img src="logo-yt.png" alt="YouTube" />
+      </a>
+      <a href="https://soundcloud.com/ttriger26" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+        <img src="logo-sc.png" alt="SoundCloud" />
+      </a>
+    </section>
+  </main>
+  
+  <script>
+fetch('news.html')
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const articles = doc.querySelectorAll('.news-item');
+    const latestNews = document.querySelector('.news');
+    if (latestNews && articles.length) {
+      for (let i = 0; i < Math.min(2, articles.length); i++) {
+        latestNews.appendChild(articles[i].cloneNode(true));
+      }
+    }
+  });
+</script>
+  
+</body>
+</html>

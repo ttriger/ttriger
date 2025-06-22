@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ttriger - Новости</title>
+    <link rel="icon" type="image/png" href="icon-tt.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arial+Black&display=swap');
+
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Arial Black', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #222;
+      flex-wrap: wrap;
+    }
+
+    header img.logo {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #222;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .news-item {
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #111;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .news-item time {
+      font-size: 0.9rem;
+      color: #777;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .news-item p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+.news-item img.news-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #000;
+}
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .news-item {
+        padding: 16px;
+        border-radius: 6px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Главная">
+      <img src="logo-ttriger.png" alt="ttriger logo" class="logo">
+    </a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="releases.html">Релизы</a>
+      <a href="ratings.html">Оценка</a>
+      <a href="news.html" class="active">Новости</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="hidden.html">?</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Новости</h1>
+
+<article class="news-item">
+  <time datetime="2025-06-22">22 июня 2025</time>
+        <p></p>
+  <img src="6290025e1bcc4a6cf31eb7fe3c0b0f0d.jpg" alt="image" class="image">
+</article>
+
+    <article class="news-item">
+      <time datetime="2025-06-21">21 июня 2025</time>
+      <p>Создан этот сайт.</p>
+    </article>
+
+    <article class="news-item">
+      <time datetime="2025-06-07">7 июня 2025</time>
+      <p>Первый альбом «Trial Tones» вышел!</p>
+    </article>
+
+    <!-- Добавляй сюда новые новости -->
+  </main>
+</body>
+</html>

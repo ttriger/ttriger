@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ttriger - Контакты</title>
+    <link rel="icon" type="image/png" href="icon-tt.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arial+Black&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Arial Black', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #222;
+      flex-wrap: wrap;
+    }
+
+    header img.logo {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #222;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .contacts-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .contacts-list li {
+      margin-bottom: 15px;
+      word-break: break-word;
+    }
+
+    .contacts-list a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+      }
+
+      .contacts-list {
+        font-size: 1rem;
+      }
+
+      .contacts-list li {
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Главная">
+      <img src="logo-ttriger.png" alt="ttriger logo" class="logo">
+    </a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="releases.html">Релизы</a>
+      <a href="ratings.html">Оценка</a>
+      <a href="news.html">Новости</a>
+      <a href="contacts.html" class="active">Контакты</a>
+      <a href="hidden.html">?</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Контакты</h1>
+    <ul class="contacts-list">
+      <li>VK: <a href="https://vk.com/tt.real" target="_blank" rel="noopener noreferrer">vk.com/tt.real</a></li>
+      <li>Discord: trigender</li>
+      <li>Mail: artemborovik0@gmail.com</li>
+      <li>Telegram: @ttriger</li>
+      <li>X: <a href="https://x.com/ttriger26" target="_blank" rel="noopener noreferrer">x.com/ttriger26</a></li>
+    </ul>
+  </main>
+</body>
+</html>

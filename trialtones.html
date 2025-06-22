@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trial Tones — ttriger</title>
+  <link rel="icon" type="image/png" href="trt-favicon.png">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('trt-cursor.png'), auto;
+  }
+  .track-title:hover {
+    cursor: url('trt-cursor-hover.png'), pointer;
+  }
+
+  body {
+    background-image: url('trt-background.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .left-column {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .right-column {
+    flex: 2;
+    min-width: 250px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+
+  img.cover {
+    width: 100%;
+    display: block;
+    margin: 1.5rem 0;
+    border-radius: 0;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .links a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  .track {
+    margin-bottom: 1rem;
+  }
+
+  .track-title {
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+
+  .track-title:hover {
+    color: #444;
+  }
+
+  .track-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    margin-top: 0.25rem;
+  }
+
+  .track-desc.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .track-desc .offense-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .track-desc.open .offense-gallery {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .track-desc .offense-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: none;
+    cursor: default;
+  }
+
+  .track-desc .offense-gallery img:hover {
+    transform: none;
+  }
+
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    body {
+      padding: 20px 10px;
+    }
+
+    .container {
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .track-title {
+      font-size: 0.95rem;
+    }
+
+    .links a {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-column">
+      <h1>Trial Tones</h1>
+      <p>by ttriger</p>
+      <img src="trt-cover.png" alt="Обложка Trial Tones" class="cover">
+    </div>
+    <div class="right-column">
+      <h2>Tracklist</h2>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">MINECROP 2</div>
+        <div class="track-desc">??.05.2023</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">JOSK</div>
+        <div class="track-desc">??.??.2024</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Density</div>
+        <div class="track-desc">??.??.2024</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Pads</div>
+        <div class="track-desc">??.??.2024</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Pxd</div>
+        <div class="track-desc">??.??.2023-2024</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Invasion</div>
+        <div class="track-desc">??.??.2024</div>
+      </div>
+
+<div class="track">
+  <div class="track-title" onclick="toggleDesc(this)">Offense</div>
+  <div class="track-desc">
+    08.02.2023
+  </div>
+</div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Metal</div>
+        <div class="track-desc">??.??.2022</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Nuke Microwave</div>
+        <div class="track-desc">??.10.2022</div>
+      </div>
+
+      <div class="track">
+        <div class="track-title" onclick="toggleDesc(this)">Old_project</div>
+        <div class="track-desc">08.10.2022</div>
+      </div>
+
+      <h2>Listen to the album</h2>
+      <div class="links">
+        <a href="https://ttriger.bandcamp.com/album/trial-tones">Bandcamp</a>
+        <a href="https://soundcloud.com/ttriger26/sets/trial-tones">SoundCloud</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">YouTube</a>
+        <a href="https://vk.com/music/playlist/487244775_92_1adef39add5b537a8e">VK</a>
+        <a href="https://untitled.stream/library/project/1OOejGe9eL63fI8mOBGQQ">[untitled]</a>
+      </div>
+    </div>
+  </div>
+<script>
+  document.querySelectorAll('.track-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const currentDesc = title.nextElementSibling;
+      const isOpen = currentDesc.classList.contains('open');
+
+      // Закрыть все описания
+      document.querySelectorAll('.track-desc').forEach(desc => {
+        desc.classList.remove('open');
+      });
+
+      // Если текущее не было открыто — открыть его
+      if (!isOpen) {
+        currentDesc.classList.add('open');
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
